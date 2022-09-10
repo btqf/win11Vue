@@ -7,11 +7,8 @@
         </div>
         <div class="username">btqf</div>
       </div>
-      <input type="password" class="password-ipt" />
-      <!-- <span class='rightrow'>
-        <img src="@/assets/img/login/rightrow.png" height='40' width="40" />
-      </span> -->
-       <img src="@/assets/img/login/rightrow.png" class='rightrow' />
+      <input type="password" class="password-ipt" @keyup="keyEvent"/>
+       <img src="@/assets/img/login/rightrow.png" class='rightrow' @click="goToHome"/>
     </div>
   </div>
 </template>
@@ -23,6 +20,9 @@ export default {
     methods: {
         toggleLogin(e) {
             e.target.classList.add('blur-wrap');
+        },
+        keyEvent(e) {
+          if(e.keyCode == 13) this.$router.push('/home');
         },
          goToHome() {
             this.$router.push('/home')
@@ -38,12 +38,12 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.8s ease-in-out;
+    transition: 0.6s ease-in-out;
     background: url('@/assets/img/login/lock.jpg');
     background-attachment: fixed;
     background-size: 100% 100%;
     // transform: scale(1.1);
-    animation: reverse slideOut 0.6s;
+    // animation: reverse slideOut 0.1s;
 
     .login-wrap {
       position: absolute;

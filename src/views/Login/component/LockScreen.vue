@@ -26,18 +26,9 @@ export default {
         }
     },
     created() {
-        // const now = dayjs()
-        // const nowYear = now.year()
-        // const nowMonth = now.month() + 1
-        // const nowDay = now.day()
-        // const nowHour = now.hour()
-        // const nowMin = now.minute()
-        // this.date = `${nowYear}/${nowMonth}/${nowDay}`
-        // this.day = `星期${calendarTableHeader[nowDay - 1]}`
-        // this.time  = `${nowHour}:${nowMin}`
         setInterval(() => {
             this.updateTime()
-        }, 5000)
+        }, 1000)
     },
     methods: {
         updateTime() {
@@ -48,7 +39,6 @@ export default {
             const nowHour = now.hour()
             const min = now.minute() 
             const nowMin = min<10 ? `0${min}`: min
-            // const nowSec = now.second()
             this.date = `${nowYear}/${nowMonth}/${nowDay}`
             this.day = `星期${calendarTableHeader[nowDay - 1]}`
             this.time  = `${nowHour}:${nowMin}`
