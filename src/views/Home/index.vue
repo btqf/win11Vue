@@ -4,7 +4,7 @@
            home
        </div>
         <div class="footer">
-            <task-Bar></task-Bar>
+            <taskBar></taskBar>
         </div>
     </div>
 </template>
@@ -36,7 +36,6 @@ export default {
     .footer {
         height: 48px;
         width: 100%;
-        background-color: pink;
     }
 }
 </style>

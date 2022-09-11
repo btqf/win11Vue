@@ -35,12 +35,12 @@
 import { pinnedData, recommendData } from '@/data/StartData.json';
 import { getSrcStartIcon } from '@/utils/getSrc.js'
 
-  const emit = defineEmits(['changeTag']);
-  function toAllApps() {
-    // console.log("  emit('changeTag');");
-    emit('changeTag');
-  }
-  const openApp = (appName) => {
+const emit = defineEmits('[changeTag]');
+function toAllApps() {
+    console.log("  emit('changeTag')");
+    emit('changeTag');  
+}
+const openApp = (appName) => {
     console.log(`open: ${appName}`);
 }
 </script>
@@ -49,7 +49,7 @@ import { getSrcStartIcon } from '@/utils/getSrc.js'
   .appList {
     font-size: 14px;
     .topNav {
-      font-size: 600;
+      font-size: 500;
       color: #666;
       display: flex;
       justify-content: space-between;
@@ -77,8 +77,8 @@ import { getSrcStartIcon } from '@/utils/getSrc.js'
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 20px;
-      margin-bottom: 10px;
+      padding: 0 20px;
+    //   margin-bottom: 10px;
       & > div {
           width: 20%;
           display: flex;
@@ -106,7 +106,7 @@ import { getSrcStartIcon } from '@/utils/getSrc.js'
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding: 10px 20px 20px 40px;
+        padding: 0px 20px 0px 40px;
         .recommendItem {
             width: 40%;
             height: 45px;
@@ -121,7 +121,7 @@ import { getSrcStartIcon } from '@/utils/getSrc.js'
                     font-size: 12px;
                     font-weight: 600;
                     color: #555;
-                    margin-top:10px;
+                    margin-top:12px;
                     margin-bottom: 0;
                     
                 }

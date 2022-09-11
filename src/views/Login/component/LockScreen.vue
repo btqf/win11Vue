@@ -35,12 +35,13 @@ export default {
             const now = dayjs()
             const nowYear = now.year()
             const nowMonth = now.month() + 1
-            const nowDay = now.day()
+            const nowDay = now.day() + 1
+            const nowDate = now.date()
             const nowHour = now.hour()
             const min = now.minute() 
             const nowMin = min<10 ? `0${min}`: min
-            this.date = `${nowYear}/${nowMonth}/${nowDay}`
-            this.day = `星期${calendarTableHeader[nowDay - 1]}`
+            this.date = `${nowYear}/${nowMonth}/${nowDate}`
+            this.day = `星期${calendarTableHeader[nowDay]}`
             this.time  = `${nowHour}:${nowMin}`
         }
     },

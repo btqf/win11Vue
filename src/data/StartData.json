@@ -85,11 +85,6 @@
         "desc": "3h ago"
       },
       {
-        "url": "twitter",
-        "title": "Twitter",
-        "desc": "1h ago"
-      },
-      {
         "url": "code",
         "title": "VS Code",
         "desc": "46m ago"
@@ -98,11 +93,6 @@
         "url": "terminal",
         "title": "Terminal",
         "desc": "5h ago"
-      },
-      {
-        "url": "spotify",
-        "title": "Spotify",
-        "desc": "3h ago"
       }
     ],
     "tabListData": [

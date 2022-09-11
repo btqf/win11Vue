@@ -1,5 +1,5 @@
-import Start from '@/component/Start';
-import Search from '@/component/Search/Search.vue';
+import Start from '@/components/start';
+import Search from '@/components/search';
 // import LeftPane from '@/component/LeftPane/LeftPane';
 
 export const toolSize = {
