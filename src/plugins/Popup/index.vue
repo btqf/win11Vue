@@ -32,7 +32,7 @@
 
   document.addEventListener('click', function () {
     isVisible.value = false;
-    console.log('click')
+    // console.log('click')
   });
 </script>
 
@@ -46,31 +46,31 @@
   /* bottom */
   .popover-content-transition-bottom-enter-from,
   .popover-content-transition-bottom-leave-to {
-    height: 500px !important;
+    width: 500px !important;
     opacity: 0;
   }
 
   .popover-content-transition-bottom-enter-active {
-    transition: height 0.05s ease-in, opacity 0.05s ease-in;
+    transition: width 0.1s ease-in, opacity 0.1s ease-in;
   }
 
   .popover-content-transition-bottom-leave-active {
-    transition: height 0.05s ease-out, opacity 0.05s ease-out;
+    transition: width 0.3s ease-out, opacity 0.3s ease-out;
   }
 
 
   .popover-content-transition-left-enter-from {
-    left: -800px;
+    right: 150px;
   }
   .popover-content-transition-left-leave-to {
-    left: 0;
+    right: 0;
   }
 
   .popover-content-transition-left-enter-active {
-    transition: left 1s;
+    transition: right 1s;
   }
 
   .popover-content-transition-left-leave-active {
-    transition: left 1s;
+    transition: right 1s;
   }
 </style>

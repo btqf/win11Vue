@@ -28,7 +28,12 @@
       </div>
       <!-- 任务栏右侧 -->
        <div class="tsright fcc">
-        <div class="up fcc">^</div>
+        <Popup dir="bottom">
+          <RunningApps></RunningApps>
+          <template #reference>
+            <div class="up fcc">^</div>
+          </template>
+        </Popup>
         <Popup dir="bottom">
           <SideWifi></SideWifi>
           <template #reference>
@@ -41,17 +46,17 @@
           </template>
         </Popup>
 
-        <Popover dir="bottom">
-          <!-- <Win11Calendar></Win11Calendar> -->
-          <!-- <template #reference> -->
+        <Popup dir="bottom">
+          <Calendar></Calendar>
+          <template #reference>
             <div class="data fcc">
               <div class="systemTime">
                 <div>{{ time }}</div>
                 <div>{{ date }}</div>
               </div>
             </div>
-          <!-- </template> -->
-        </Popover>
+          </template>
+        </Popup>
       </div>
     </div>
 </template>
@@ -61,21 +66,30 @@ import {taskBarData, taskBarBottomPop} from '@/data'
 import { reactive } from 'vue'
 import { getSrcIcon } from '@/utils/getSrc.js'
 import SideWifi from '../sideWifi'
+import RunningApps from '../runninngApps'
+import Calendar from '../Calendar'
 
 const tsData = reactive(taskBarData)
 const tsPop = reactive(taskBarBottomPop)
 
 const time = ref('00:00');
 const date = ref('0000/00/00');
+
+const fn = () => {
+  const currentTime = new Date();
+  time.value = currentTime.toLocaleTimeString().slice(0, 5); // 获取当前时间 上午11:29
+  date.value = currentTime.toLocaleDateString(); // 获取当前日期，2021/12/1
+};
+fn();
+setInterval(fn, 1000);
 </script>
 
 <style lang="scss" scoped>
    .taskbar {
-      --bg1: rgba(243, 243, 243, 0.85);
       position: absolute;
       width: 100vw;
       height: 48px;
-      background: var(--bg1);
+      background-color: $myBlue;
       backdrop-filter: saturate(3) blur(20px);
       bottom: 0;
       user-select: none;
@@ -90,6 +104,9 @@ const date = ref('0000/00/00');
     &:hover {
       background: rgba(255, 255, 255, 0.8);
       transition: all 200ms ease-in-out;
+    }
+    .up {
+      padding: 10px 0;
     }
   }
   .fcs {

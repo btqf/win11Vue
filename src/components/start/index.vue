@@ -38,7 +38,7 @@ const goToLoginPage = () => {
     height: 636px;
     border-radius: 3px;
     box-shadow: 1px 1px 2px rgba(34, 34, 34, 0.25);
-    background-color: rgb(222 235 246);
+    background-color: $myBlue;
     position: fixed;
     bottom: 60px;
     left: 50%;
@@ -66,7 +66,6 @@ const goToLoginPage = () => {
   }
   .bottomMenu {
     .user {
-    //   border-top: #d8d9da solid;
       height: 100%;
       font-size: 14px;
       display: flex;

@@ -31,6 +31,13 @@ export default defineConfig({
     },
     extensions: ['.vue', '.js', '.jsx'],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/global.scss";`
+      }
+    }
+  },
   plugins: [
     vue(),
     AutoImport({

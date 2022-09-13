@@ -52,7 +52,7 @@ const selectOption = function(index) {
     right: 12px;
     width: 360px;
     border-radius: 0.5rem;
-    background: #e9f2ff;
+    background: $myBlue;
     padding: 1.25rem 1.25rem 2rem 1.25rem;
     overflow: hidden;
     z-index: -1;

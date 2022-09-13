@@ -1,6 +1,6 @@
 <template>
   <div class="box2">
-    <!-- 头部栏 -->
+    <!-- 头部 -->
     <div class="topNav">
       <p>All app</p>
       <button @click.stop="toPinned" class="elbutton">

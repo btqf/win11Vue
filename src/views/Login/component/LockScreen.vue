@@ -15,7 +15,7 @@
 <script>
 import dayjs from 'dayjs'
 
-const calendarTableHeader = ['一', '二', '三', '四', '五', '六', '日']
+const calendarTableHeader = ['一', '二', '三', '四', '五', '六', '日'];
 export default {
     data() {
         return {
