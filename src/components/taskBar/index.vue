@@ -2,9 +2,15 @@
     <div class="taskbar fcs">
         <!-- 任务栏左侧 -->
         <div class="tsleft">
-            <div class="taskbarBtn" id="widget" @click.stop="">
-                <img src="@/assets/img/icon/widget.png" alt="" id="startMenuImg" />
-            </div>
+          <Popup dir="bottom">
+            <LeftPane></LeftPane>
+            <template #reference>
+              <div class="taskbarBtn" id="widget">
+                  <img src="@/assets/img/icon/widget.png" alt="" id="startMenuImg" />
+              </div>
+            </template>
+          </Popup>
+            
       </div>
       <!-- 任务栏中间 -->
       <div class="center fcc">
@@ -65,6 +71,7 @@
 import {taskBarData, taskBarBottomPop} from '@/data'
 import { reactive } from 'vue'
 import { getSrcIcon } from '@/utils/getSrc.js'
+import LeftPane from '../leftPane'
 import SideWifi from '../sideWifi'
 import RunningApps from '../runninngApps'
 import Calendar from '../Calendar'
@@ -82,6 +89,7 @@ const fn = () => {
 };
 fn();
 setInterval(fn, 1000);
+
 </script>
 
 <style lang="scss" scoped>

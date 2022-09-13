@@ -32,7 +32,6 @@
 
   document.addEventListener('click', function () {
     isVisible.value = false;
-    // console.log('click')
   });
 </script>
 

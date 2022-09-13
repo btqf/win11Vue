@@ -27,9 +27,17 @@ const getSrcSearch = (name) => {
   return modules[path]?.default;
 };
 
+const getSrcLeftPane = (name) => {
+  if (typeof name === 'undefined') return 'error.png';
+  const path = `/src/assets/img/leftPane/${name}`;
+  const modules = import.meta.globEager(`/src/assets/img/leftPane/*`);
+  return modules[path]?.default;
+};
+
 export {
     getSrcStartIcon,
     getSrcIcon,
     getSrcIconUI,
-    getSrcSearch
+    getSrcSearch,
+    getSrcLeftPane
 }
