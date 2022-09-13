@@ -19,8 +19,17 @@ const getSrcIcon = (name) => {
   return modules[path]?.default;
 };
 
+
+const getSrcSearch = (name) => {
+  if (typeof name === 'undefined') return 'error.png';
+  const path = `/src/assets/img/search/${name}`;
+  const modules = import.meta.globEager(`/src/assets/img/search/*`);
+  return modules[path]?.default;
+};
+
 export {
     getSrcStartIcon,
     getSrcIcon,
-    getSrcIconUI
+    getSrcIconUI,
+    getSrcSearch
 }
