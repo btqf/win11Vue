@@ -1,5 +1,5 @@
 import Start from '@/components/start';
-import Search from '@/components/search';
+import Search from '@/components/Search';
 // import LeftPane from '@/component/LeftPane/LeftPane';
 
 export const toolSize = {
@@ -77,7 +77,7 @@ export const deskTopData = [
     icon: 'edge.png',
     name: 'Edge',
     componentName: 'EdgeFullBox',
-    posIdx: 5,
+    posIdx: 4,
   },
   {
     icon: 'store.png',

@@ -81,7 +81,7 @@
       width: 90%;
       .search-input {
         width: 100%;
-        background: #ffffff;
+        background: $myWhite;
         border: none;
         outline: none;
         margin-left: 10px;
@@ -115,7 +115,7 @@
               margin: 0;
             }
             &:hover {
-              background-color: white;
+              background-color: $myWhite;
             }
           }
         }

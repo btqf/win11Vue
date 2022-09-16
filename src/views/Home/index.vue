@@ -1,22 +1,23 @@
 <template>
     <div class="desktop">
        <div class="main">
-           home
+           <DesktopIcon></DesktopIcon>
        </div>
         <div class="footer">
-            <taskBar></taskBar>
+            <TaskBar></TaskBar>
         </div>
     </div>
 </template>
 
 <script>
-import taskBar from '@/components/taskBar/index.vue'
+import DesktopIcon from '@/components/DesktopIcon'
+import TaskBar from '@/components/TaskBar/index.vue'
+
 export default {
+    name:'Home',
     components: {
-        taskBar
-    },
-    setup () {
-        return {}
+        DesktopIcon,
+        TaskBar
     }
 }
 </script>
@@ -32,6 +33,8 @@ export default {
     .main {
         height: calc(100% - 48px);
         width: 100%;
+        background-image: url("@/assets/img/setting/assetsImg/default/default.jpg");
+        background-size: 100% 100%;
     }
     .footer {
         height: 48px;

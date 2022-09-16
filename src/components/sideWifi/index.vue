@@ -40,7 +40,6 @@ import { reactive } from 'vue'
 
 const selectStat = reactive(new Array(6).fill(0))
 const selectOption = function(index) {
-    console.log('selectStat')
     selectStat[index] = !selectStat[index]
 }
 </script>

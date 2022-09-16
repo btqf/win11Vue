@@ -72,8 +72,8 @@ import {taskBarData, taskBarBottomPop} from '@/data'
 import { reactive } from 'vue'
 import { getSrcIcon } from '@/utils/getSrc.js'
 import LeftPane from '../leftPane'
-import SideWifi from '../sideWifi'
-import RunningApps from '../runninngApps'
+import SideWifi from '../SideWifi'
+import RunningApps from '../RunninngApps'
 import Calendar from '../Calendar'
 
 const tsData = reactive(taskBarData)
@@ -91,6 +91,8 @@ fn();
 setInterval(fn, 1000);
 
 </script>
+
+
 
 <style lang="scss" scoped>
    .taskbar {
@@ -110,7 +112,7 @@ setInterval(fn, 1000);
     height: 40px;
     padding: 0 8px;
     &:hover {
-      background: rgba(255, 255, 255, 0.8);
+      background: $myGray;
       transition: all 200ms ease-in-out;
     }
     .up {
@@ -128,7 +130,7 @@ setInterval(fn, 1000);
     justify-content: center;
   }
   .hvlight:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: $myGray;
     transition: all 200ms ease-in-out;
   }
   .taskbarBtn {

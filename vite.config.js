@@ -15,7 +15,6 @@ export default defineConfig({
         changeOrigin: true,
         ws: true,
         secure: false, // https检查
-        // rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
   },
@@ -25,9 +24,7 @@ export default defineConfig({
       view: getPath('src/view'),
       store: getPath('src/store'),
       comp: getPath('src/component'),
-      style: getPath('src/assets/style'),
       router: getPath('src/router'),
-      request: getPath('src/services/request.js'),
     },
     extensions: ['.vue', '.js', '.jsx'],
   },

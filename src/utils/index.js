@@ -1,7 +1,3 @@
-const showBox = (target, name) => {
+export const showBox = (target, name) => {
 
-}
-
-export {
-    showBox
 }

@@ -5,6 +5,7 @@ specifiers:
   '@vitejs/plugin-vue-jsx': ^2.0.1
   chinese-lunar-calendar: ^1.0.1
   dayjs: ^1.11.5
+  lodash: ^4.17.21
   pinia: ^2.0.22
   sass: ^1.54.9
   unplugin-auto-import: ^0.11.2
@@ -16,6 +17,7 @@ dependencies:
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.0+vue@3.2.39
   chinese-lunar-calendar: 1.0.1
   dayjs: 1.11.5
+  lodash: 4.17.21
   pinia: 2.0.22_vue@3.2.39
   vue: 3.2.39
   vue-router: 4.1.5_vue@3.2.39
@@ -969,6 +971,10 @@ packages:
     resolution: {integrity: sha512-mlERgSPrbxU3BP4qBqAvvwlgW4MTg78iwJdGGnv7kibKjWcJksrG3t6LB5lXI93wXRDvG4NpUgJFmTG4T6rdrg==}
     engines: {node: '>=14'}
     dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
 
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}

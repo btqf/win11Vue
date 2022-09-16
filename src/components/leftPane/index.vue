@@ -44,7 +44,7 @@ import { leftPaneData } from '@/data/leftPaneData.json';
           .search-bar {
               height: 40px;
               border-radius: 6px;
-              background: #ffffff;
+              background: $myWhite;
               display: flex;
               align-content: center;
               padding: 0 10px;
