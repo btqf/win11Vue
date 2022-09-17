@@ -26,8 +26,8 @@
 
   const configStore = useDeskTopConfigStore();
   const { iconBaseWeight, iconBaseHeight, maxIconCountY } = configStore;
-
   // console.log('maxIconCountY:', maxIconCountY)
+  const deskTopIconRef = ref(null);
 
   const props = defineProps({
     icon: {

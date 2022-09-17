@@ -81,7 +81,6 @@ const dragModalFrame = (e) => {
   //   return new DesktopIcon(deskTopData, desktopFolderData.children).appData;
   // })
 
-
 </script>
 
 <style lang="scss">

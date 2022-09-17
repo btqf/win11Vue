@@ -35,7 +35,7 @@ export default {
             const now = dayjs()
             const nowYear = now.year()
             const nowMonth = now.month() + 1
-            const nowDay = now.day() + 1
+            const nowDay = now.day() - 1
             const nowDate = now.date()
             const nowHour = now.hour()
             const min = now.minute() 
@@ -45,9 +45,6 @@ export default {
             this.time  = `${nowHour}:${nowMin}`
         }
     },
-    setup () {
-        return {}
-    }
 }
 </script>
 
