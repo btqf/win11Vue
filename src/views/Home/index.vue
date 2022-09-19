@@ -1,7 +1,9 @@
 <template>
     <div class="desktop">
        <div class="main">
+           <Folder></Folder>
            <DesktopIcon></DesktopIcon>
+           
        </div>
         <div class="footer">
             <TaskBar></TaskBar>
@@ -11,13 +13,18 @@
 
 <script>
 import DesktopIcon from '@/components/DesktopIcon'
+import Folder from '@/components/Folder'
 import TaskBar from '@/components/TaskBar/index.vue'
+
+
 
 export default {
     name:'Home',
     components: {
+        Folder,
         DesktopIcon,
-        TaskBar
+        TaskBar,
+        
     }
 }
 </script>

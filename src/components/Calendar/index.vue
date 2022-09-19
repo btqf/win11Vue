@@ -4,7 +4,7 @@
       <div class="now">
         <div class="nowdata">
           <div class="calendar-date" @click="step = 0">
-            {{ nowMonth }}月{{ nowDate }}日，星期{{ calendarTableHeader[nowDay - 1] }}
+            {{ nowMonth }}月{{ nowDate }}日，星期{{ calendarTableHeader[nowDay] }}
           </div>
           <div class="lunar-date">{{ nowLunar }}</div>
         </div>
@@ -47,7 +47,7 @@
 
   const nowHour = computed(() => fillZero(now.dayjs.hour()));
   const nowMinute = computed(() => fillZero(now.dayjs.minute()));
-  const calendarTableHeader = ['一', '二', '三', '四', '五', '六', '日'];
+  const calendarTableHeader = ['日', '一', '二', '三', '四', '五', '六']
 
   const step = ref(0);
   const selectMonth = (type) => {

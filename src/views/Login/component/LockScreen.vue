@@ -15,7 +15,7 @@
 <script>
 import dayjs from 'dayjs'
 
-const calendarTableHeader = ['一', '二', '三', '四', '五', '六', '日'];
+const calendarTableHeader = ['日', '一', '二', '三', '四', '五', '六'];
 export default {
     data() {
         return {
@@ -26,6 +26,7 @@ export default {
         }
     },
     created() {
+        console.log(dayjs().day() - 1)
         setInterval(() => {
             this.updateTime()
         }, 1000)
@@ -35,7 +36,7 @@ export default {
             const now = dayjs()
             const nowYear = now.year()
             const nowMonth = now.month() + 1
-            const nowDay = now.day() - 1
+            const nowDay = now.day()
             const nowDate = now.date()
             const nowHour = now.hour()
             const min = now.minute() 

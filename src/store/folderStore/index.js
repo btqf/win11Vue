@@ -20,7 +20,7 @@ const useFolderStore = defineStore('folderStore', {
             const len = this.currentSearchStr.length;
             this.currentSearchStr.splice(0, len);
         },
-        cachesCompleteFolder(Folders) {
+        cacheCompletedFolder(Folders) {
             this.storeCompletedFolder = Folders;
         },
         addLastFolder(Folder) {

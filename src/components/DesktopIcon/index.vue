@@ -75,11 +75,11 @@ const dragModalFrame = (e) => {
 
   // 将 app 图标与 文件 图标结合在一起
   // 确定将指定桌面文件路径下的文件显示在桌面上
-  // const desktopFolderData =  searchTargetFolderByPath(['C:', 'DeskTop'])
+  const desktopFolderData =  searchTargetFolderByPath(['C:', 'DeskTop'])
 
-  // const DesktopIconData = computed(() => {
-  //   return new DesktopIcon(deskTopData, desktopFolderData.children).appData;
-  // })
+  const DesktopIconData = computed(() => {
+    return new DesktopIcon(deskTopData, desktopFolderData.children).appData;
+  })
 
 </script>
 

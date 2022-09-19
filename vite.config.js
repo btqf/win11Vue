@@ -21,9 +21,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': getPath('src'),
-      view: getPath('src/view'),
+      view: getPath('src/views'),
       store: getPath('src/store'),
-      comp: getPath('src/component'),
+      comp: getPath('src/components'),
       router: getPath('src/router'),
     },
     extensions: ['.vue', '.js', '.jsx'],
