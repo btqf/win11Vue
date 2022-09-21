@@ -22,7 +22,7 @@
   import { getViewportSize } from '@/utils/ViewSize/desktop';
   import { showBox } from '@/utils'
   import useDeskTopConfigStore from '@/store/desktopConfigStore';
-  import folderStore from '@/store/folderStore';
+  import useFolderStore from '@/store/folderStore';
 
   const configStore = useDeskTopConfigStore();
   const { iconBaseWeight, iconBaseHeight, maxIconCountY } = configStore;
@@ -55,10 +55,10 @@
   const dblClickApp = (e, item) => {
     const target = document.querySelector(`.${item.componentName}`);
     if (item.componentName === 'FolderFullBox') {
-      const store = folderStore();
+      const store = useFolderStore();
       store.changeCurrentFolder(item);
     }
-    showBox(target);
+    showBox(target, item.componentName);
   };
 
   const getPos = (posIdx) => {

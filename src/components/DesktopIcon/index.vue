@@ -3,7 +3,7 @@
     <div class="modalFrame" ref="ModalFrameRef"></div>
     <div class="deskTopIcons" ref="IconsRef">
       <IconItem
-        v-for="(item, index) in deskTopData"
+        v-for="(item, index) in DesktopIconData"
         :key="index"
         :icon="item.icon"
         :name="item.name"
@@ -78,7 +78,7 @@ const dragModalFrame = (e) => {
   const desktopFolderData =  searchTargetFolderByPath(['C:', 'DeskTop'])
 
   const DesktopIconData = computed(() => {
-    return new DesktopIcon(deskTopData, desktopFolderData.children).appData;
+    return new DesktopIcon(deskTopData, desktopFolderData.children).appData
   })
 
 </script>

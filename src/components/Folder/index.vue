@@ -2,13 +2,15 @@
     <div class="FolderFullBox FullBox">
         <ToolBar>File Explorer</ToolBar>
         <FolderTopTool></FolderTopTool>
+        <PathTool></PathTool>
         <main>
             <nav class="scroll">
-
+              <DropDown></DropDown>
             </nav>
             <div class="mainBody">
-
+              <MainBody></MainBody>
             </div>
+            <!-- <div class="empty"></div> -->
         </main>
     </div>
 </template>
@@ -16,8 +18,11 @@
 <script setup>
 import ToolBar from '../ToolBar'
 import FolderTopTool from './components/FolderTopTool.vue'
+import PathTool from './components/PathTool.vue'
+import DropDown from './components/DropDown'
+import MainBody from './components/MainBody'
 import Desc from '@/utils/OS/desc';
-import { PCData } from '@/data/folderData'
+import { PCData } from '@/data/FolderData'
 import useFolderStore from '@/store/folderStore'
 
 const store = useFolderStore();
@@ -29,7 +34,7 @@ const data = (function() {
     return descs;
 })();
 store.cacheCompletedFolder(data);
-console.log('computed', store.storeCompletedFolder)
+// console.log('computedStore', store.storeCompletedFolder)
 </script>
 
 <style lang="scss" scoped>
@@ -42,20 +47,25 @@ console.log('computed', store.storeCompletedFolder)
     main {
       display: flex;
       width: 100%;
-      height: calc(100% - 130px);
+      height: calc(100% - 127px);
       border-radius: 0 0 6px 6px;
-      background-color: #ffffff;
+      background-color: $myWhite;
 
       nav {
         width: 15em;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: hidden;
       }
 
       .mainBody {
         width: 100%;
         height: 100%;
-        border-left: 0.1em solid #dddddd;
+        border-left: 0.05em solid $folderGray;
+        overflow: hidden;
+      }
+      .empty {
+        height: 100%;
+        width: 100%;
       }
     }
   }

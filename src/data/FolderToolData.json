@@ -1,0 +1,39 @@
+{
+    "toolData": [
+          {
+            "type": "spacer"
+          },
+          {
+            "type":"'ico",
+            "icon": "cut.png"
+          },
+          {
+            "type": "icon",
+            "icon": "copy.png"
+          },
+          {
+            "type": "icon",
+            "icon": "paste.png"
+          },
+          {
+            "type": "icon",
+            "icon": "rename.png"
+          },
+          {
+            "type": "spacer"
+          },
+          {
+            "type": "icon",
+            "icon": "sort.png",
+            "desc": "Sort"
+          },
+          {
+            "type": "icon",
+            "icon": "view.png",
+            "desc": "View"
+          },
+          {
+            "type": "spacer"
+          }
+    ]
+}

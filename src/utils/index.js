@@ -11,7 +11,7 @@ export const showBox = (target, name) => {
     target.style.zIndex = topZindex(target);
     target.classList.add('showBox');
     target.classList.remove('hideBox');
-
+    console.log(name)
     if (name) {
         let flag;
         // 判断是否 taskbar 中是否已存在当前app
@@ -39,41 +39,43 @@ export const showBox = (target, name) => {
  * 根据是否为最小化或者关闭，决定是否给borderBottom
  * 由于底部栏的id和组件的类名同名，所以可以同时操作是否显示borderBottom
  */
-export const hideBox = (flag, target, e) => {
+ export const hideBox = (flag, target, e) => {
     if (!target) return;
-
+  
     target.style.zIndex = -1;
     target.classList.remove('showBox');
     target.classList.add('hideBox');
     relizeZindex(target);
-
+  
     const item = document.querySelector(`#${e}`);
+  
     if (!flag) {
       item.style.borderBottom = '0';
     } else {
       item.style.borderBottom = '3px solid black';
     }
-}
+  };
+  
 
 /**
  * @param {*} target 目标组件
  * 在data目录中共同维护一个最高层级的索引值，
  * 每次调用此函数，返回当前最大的索引级数返回给调用者，同时维护该数据++
  */
-export const topZindex = (target) => {
+ export const topZindex = (target) => {
     forAppArray();
     toggleTaskPublicData.currentAppCount.push(target);
     return ++toggleTaskPublicData.zIndex;
-}
+  };
 
 /**
  * 降低当前已打开 app 中的显示层级
  */
-export const forAppArray = () => {
-    toggleTaskPublicData.currentAppCount.map((item) => {
-        item.style.zIndex = --item.style.zIndex < 1 ? 1 : item.style.zIndex;
+ export const forAppArray = () => {
+    toggleTaskPublicData.currentAppCount.map((value) => {
+      value.style.zIndex = --value.style.zIndex < 1 ? 1 : value.style.zIndex;
     });
-}
+  };
 
 /**
  * @param {*} target 目标组件
@@ -90,3 +92,8 @@ export const relizeZindex = (target) => {
     });
     --toggleTaskPublicData.zIndex
 }
+
+export const searchMaxZindex = () => {
+    forAppArray();
+    return toggleTaskPublicData.zIndex;
+  };

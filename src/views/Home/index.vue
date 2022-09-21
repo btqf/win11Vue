@@ -16,8 +16,6 @@ import DesktopIcon from '@/components/DesktopIcon'
 import Folder from '@/components/Folder'
 import TaskBar from '@/components/TaskBar/index.vue'
 
-
-
 export default {
     name:'Home',
     components: {
