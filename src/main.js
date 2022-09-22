@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 import stores from '@/store';
 import routers from '@/router'
-import '@/styles/style.css'
+import '@/styles/style.scss'
 import win11UI from '@/plugins'
 
 

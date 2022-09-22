@@ -1,9 +1,10 @@
 <template>
-    <div class="desktop">
+    <div class="desktop" @contextmenu.prevent="showMainMenu($event)" @click="changeMenuVisible">
        <div class="main">
+           <ContextMenu ref="menuRef"></ContextMenu>
+           <IconOverlayTip></IconOverlayTip>
            <Folder></Folder>
-           <DesktopIcon></DesktopIcon>
-           
+           <DesktopIcon></DesktopIcon> 
        </div>
         <div class="footer">
             <TaskBar></TaskBar>
@@ -11,20 +12,38 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import ContextMenu from '@/components/ContextMenu'
+import IconOverlayTip from './components/IconOverlayTip.vue'
 import DesktopIcon from '@/components/DesktopIcon'
 import Folder from '@/components/Folder'
 import TaskBar from '@/components/TaskBar/index.vue'
+import useMenuStore from '@/store/menuStore'
 
-export default {
-    name:'Home',
-    components: {
-        Folder,
-        DesktopIcon,
-        TaskBar,
-        
-    }
+const menuRef = ref(null);
+const showMainMenu = (e) => {
+    menuRef.value.setMenu(e, 'blank')
 }
+
+const store = useMenuStore();
+const changeMenuVisible = () => {
+    store.setMenuVisible(false);
+}
+// export default {
+//     name:'Home',
+//     components: {
+//         ContextMenu,
+//         Folder,
+//         DesktopIcon,
+//         TaskBar,
+//         IconOverlayTip
+//     },
+//     methods: {
+//         showMainMenu: (e) => {
+//           menuRef.value.setMenu(e, 'blank');
+//         }
+//     }
+// }
 </script>
 
 <style lang="scss" scoped>

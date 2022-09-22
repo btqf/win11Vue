@@ -60,7 +60,7 @@
   });
 
   // 最小化
-  const mini = () => {
+  const min = () => {
     hideBox(true, parent, parent.classList[0]);
   };
 

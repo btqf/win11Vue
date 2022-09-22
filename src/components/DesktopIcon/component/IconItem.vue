@@ -2,6 +2,7 @@
     <div
     ref="deskTopIconRef"
     class="deskTopIcon"
+    @contextmenu.stop="showMainMenu($event)"
     @dblclick="dblClickApp($event, data)"
     @click="clickApp"
     :style="`
@@ -94,13 +95,17 @@
     }
   };
 
-  const getClasses = () => {
-    const classes = [];
-    if (configStore.currentSelected.some((item) => item.posIdx === props.data.posIdx)) {
-      classes.push('selected');
-    }
-    return classes;
+const getClasses = () => {
+  const classes = [];
+  if (configStore.currentSelected.some((item) => item.posIdx === props.data.posIdx)) {
+    classes.push('selected');
   }
+  return classes;
+}
+
+const showMainMenu = (e) => {
+  e.preventDefault();
+};
 </script>
 
 <style lang="scss" scoped>

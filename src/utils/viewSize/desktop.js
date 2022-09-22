@@ -23,18 +23,18 @@ export function getViewportSize () {
 
 // 封装获取滚动距离函数
 export function getScrollOffset() {
-    if (window.pageXOffset) {
-      return {
-        left: window.pageXOffset,
-        top: window.pageYOffset,
-      };
-    } else {
-      return {
-        left: document.body.scrollLeft + document.documentElement.scrollLeft,
-        top: document.body.scrollTop + document.documentElement.scrollTop,
-      };
-    }
+  if (window.pageXOffset) {
+    return {
+      left: window.pageXOffset,
+      top: window.pageYOffset,
+    };
+  } else {
+    return {
+      left: document.body.scrollLeft + document.documentElement.scrollLeft,
+      top: document.body.scrollTop + document.documentElement.scrollTop,
+    };
   }
+}
 
 // 兼容性 PageX / PageY
 export function pagePos(e) {

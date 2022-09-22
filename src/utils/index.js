@@ -1,4 +1,4 @@
-import { taskBarData, toggleTaskPublicData } from '../data'
+import { taskBarData, toggleTaskPublicData } from '@/data'
 
 /**
  * @param {*} target 目标组件元素
@@ -11,7 +11,8 @@ export const showBox = (target, name) => {
     target.style.zIndex = topZindex(target);
     target.classList.add('showBox');
     target.classList.remove('hideBox');
-    console.log(name)
+    console.log('name', name)
+
     if (name) {
         let flag;
         // 判断是否 taskbar 中是否已存在当前app
@@ -46,9 +47,9 @@ export const showBox = (target, name) => {
     target.classList.remove('showBox');
     target.classList.add('hideBox');
     relizeZindex(target);
-  
+    console.log('target', target);
+
     const item = document.querySelector(`#${e}`);
-  
     if (!flag) {
       item.style.borderBottom = '0';
     } else {
@@ -83,15 +84,15 @@ export const showBox = (target, name) => {
  * 当前页面上显示的application数字减一
  */
 export const relizeZindex = (target) => {
+  toggleTaskPublicData.currentAppCount.map((value, i, array) => {
+    const originClass = value.getAttribute('class');
     const targetClass = target.getAttribute('class');
-    toggleTaskPublicData.currentAppCount.map((item, i, array) => {
-        const originClass = item.getAttribute('class');
-        if (targetClass === originClass) {
-            array.splice(i, 1)
-        }
-    });
-    --toggleTaskPublicData.zIndex
-}
+    if (originClass === targetClass) {
+      array.splice(i, 1);
+    }
+  });
+  --toggleTaskPublicData.zIndex;
+};
 
 export const searchMaxZindex = () => {
     forAppArray();
