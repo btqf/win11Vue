@@ -12,9 +12,9 @@ const routes = [
         component: () => import('@/views/Home')
     },
     {
-        path: '/folder',
-        name: 'folder',
-        component: () => import('@/components/Folder')
+        path: '/terminal',
+        name: 'terminal',
+        component: () => import('@/components/Terminal')
     }
 ]
 

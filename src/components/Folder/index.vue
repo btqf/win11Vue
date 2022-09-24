@@ -10,7 +10,6 @@
             <div class="mainBody">
               <MainBody></MainBody>
             </div>
-            <!-- <div class="empty"></div> -->
         </main>
     </div>
 </template>
@@ -34,7 +33,6 @@ const data = (function() {
     return descs;
 })();
 store.cacheCompletedFolder(data);
-// console.log('computedStore', store.storeCompletedFolder)
 </script>
 
 <style lang="scss" scoped>
@@ -62,10 +60,6 @@ store.cacheCompletedFolder(data);
         height: 100%;
         border-left: 0.05em solid $folderGray;
         overflow: hidden;
-      }
-      .empty {
-        height: 100%;
-        width: 100%;
       }
     }
   }

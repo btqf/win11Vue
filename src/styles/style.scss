@@ -2,6 +2,7 @@ html,body,#app{
     margin: 0;
     padding: 0;
     height: 100%;
+    // overflow: hidden;
 }
 
 /**
@@ -56,8 +57,6 @@ html,body,#app{
     font-size: 1em; /* 2 */
   }
   
-  /* Text-level semantics
-     ========================================================================== */
   
   /**
    * Remove the gray background on active links in IE 10.
@@ -128,9 +127,6 @@ html,body,#app{
     top: -0.5em;
   }
   
-  /* Embedded content
-     ========================================================================== */
-  
   /**
    * Remove the border on images inside links in IE 10.
    */
@@ -139,16 +135,13 @@ html,body,#app{
     border-style: none;
   }
   
-  /* Forms
-     ========================================================================== */
-  
   /**
    * 1. Change the font styles in all browsers.
    * 2. Remove the margin in Firefox and Safari.
    */
   
-  button,
-  input,
+  // button,
+  // input,
   optgroup,
   select,
   textarea {

@@ -11,7 +11,6 @@ export const showBox = (target, name) => {
     target.style.zIndex = topZindex(target);
     target.classList.add('showBox');
     target.classList.remove('hideBox');
-    console.log('name', name)
 
     if (name) {
         let flag;
@@ -47,7 +46,6 @@ export const showBox = (target, name) => {
     target.classList.remove('showBox');
     target.classList.add('hideBox');
     relizeZindex(target);
-    console.log('target', target);
 
     const item = document.querySelector(`#${e}`);
     if (!flag) {

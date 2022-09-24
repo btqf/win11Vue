@@ -28,7 +28,7 @@
 <script setup>
   import { toolSize } from '@/data';
   import { hideBox, searchMaxZindex } from '@/utils';
-  import { getSrcSetting } from '../../utils/getSrc';
+  import { getSrcSetting } from '@/utils/getSrc';
   defineProps({
     color: {
       type: String,
@@ -228,7 +228,8 @@
         padding: 9.60px;
         background-color: transparent;
         img {
-          width: 40%;
+          width: 45%;
+          padding-bottom: 9.60px;
         }
         &:hover {
           background-color: #d6d6d7;

@@ -1,0 +1,61 @@
+{
+    "MenuData": [
+        {
+            "type": "icon",
+            "url": "view",
+            "desc": "查看"
+        },
+        {
+            "type": "icon",
+            "url": "sort",
+            "desc": "排序方式"
+        },
+        {
+            "type": "icon",
+            "url": "refresh",
+            "desc": "刷新"
+        },
+        {
+            "type": "hr"
+        },
+        {
+            "type": "icon",
+            "url": "new",
+            "desc": "新建"
+        },
+        {
+            "type": "icon",
+            "url": "git",
+            "desc": "git"
+        },
+        {
+            "type": "hr"
+        },
+        {
+            "type": "icon",
+            "url": "setting",
+            "desc": "显示设置"
+        },
+        {
+            "type": "icon",
+            "url": "personalize",
+            "desc": "个性化"
+        },
+        {
+            "type": "hr"
+        },
+        {
+            "type": "icon",
+            "url": "check",
+            "desc": "在终端打开"
+        },
+        {
+            "type": "hr"
+        },
+        {
+            "type": "icon",
+            "url": "change",
+            "desc": "显示更多选项"
+        }
+    ]
+}

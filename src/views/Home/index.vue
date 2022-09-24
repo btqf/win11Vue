@@ -5,6 +5,7 @@
            <IconOverlayTip></IconOverlayTip>
            <Folder></Folder>
            <DesktopIcon></DesktopIcon> 
+           <Terminal></Terminal>
        </div>
         <div class="footer">
             <TaskBar></TaskBar>
@@ -17,6 +18,7 @@ import ContextMenu from '@/components/ContextMenu'
 import IconOverlayTip from './components/IconOverlayTip.vue'
 import DesktopIcon from '@/components/DesktopIcon'
 import Folder from '@/components/Folder'
+import Terminal from '@/components/Terminal'
 import TaskBar from '@/components/TaskBar/index.vue'
 import useMenuStore from '@/store/menuStore'
 

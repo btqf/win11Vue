@@ -39,7 +39,7 @@ export const PCData = [
                         {
                           extension: 'mp4',
                           name: '青花瓷',
-                          size: '100GB',
+                          size: '4MB',
                         },
                         {
                           extension: 'mp4',
@@ -85,7 +85,7 @@ export const PCData = [
                         {
                           extension: 'mp4',
                           name: '青花瓷',
-                          size: '100GB',
+                          size: '4MB',
                         },
                         {
                           extension: 'mp4',
@@ -143,7 +143,7 @@ export const PCData = [
                     {
                       extension: 'mp4',
                       name: '青花瓷',
-                      size: '100GB',
+                      size: '4MB',
                     },
                     {
                       extension: 'mp4',

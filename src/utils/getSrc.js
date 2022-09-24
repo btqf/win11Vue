@@ -41,6 +41,13 @@ const getSrcSetting = (name) => {
   return modules[path]?.default;
 };
 
+const getSrcContextMenu = (name) => {
+  if (typeof name === 'undefined') return 'error.png';
+  const path = `/src/assets/img/menus/${name}`;
+  const modules = import.meta.globEager(`/src/assets/img/menus/*`);
+  return modules[path]?.default;
+}
+
 
 export {
     getSrcStartIcon,
@@ -48,5 +55,6 @@ export {
     getSrcIconUI,
     getSrcSearch,
     getSrcLeftPane,
-    getSrcSetting
+    getSrcSetting,
+    getSrcContextMenu
 }

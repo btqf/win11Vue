@@ -53,9 +53,12 @@
   import { lastedData, quickSearchData } from '@/data/SearchData.json';
   import { recommendData } from '@/data/StartData.json';
   import { getSrcStartIcon } from '@/utils/getSrc';
+  import { showBox } from '@/utils';
 
   const openApp = (name) => {
-  };
+    const target = document.querySelector(`.${name}`);
+    showBox(target, name);
+  }; 
 </script>
 
 <style lang="scss" scoped>
