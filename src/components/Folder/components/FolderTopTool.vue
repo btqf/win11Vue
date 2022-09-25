@@ -54,7 +54,7 @@ const addNewFolder = async() => {
       display: flex;
       height: 80%;
       margin: 0;
-      padding: 0.2em 1.5em;
+      padding: 0.2em 1.2em;
 
       li {
         display: flex;
@@ -63,6 +63,7 @@ const addNewFolder = async() => {
         padding: 0.5em;
         img {
           width: 1.2em;
+          padding-right: 0.1em;
         }
         .desc {
           // margin-left: .5em;

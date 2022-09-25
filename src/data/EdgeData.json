@@ -1,0 +1,39 @@
+{
+    "WebSitesData": [
+        {
+          "title": "必应",
+          "icon": "edge",
+          "url": "https://cn.bing.com/"
+        },
+        {
+          "title": "哔哩哔哩",
+          "icon": "bilibili",
+          "url": "https://www.bilibili.com/"
+        },
+        {
+          "title": "淘宝网",
+          "icon": "taobao",
+          "url": "https://www.taobao.com/"
+        },
+        {
+          "title": "力扣",
+          "icon": "leetcode",
+          "url": "https://leetcode-cn.com/"
+        },
+        {
+          "title": "掘金",
+          "icon": "juejin",
+          "url": "https://juejin.cn/"
+        },
+        {
+          "title": "Vue.js",
+          "icon": "vue",
+          "url": "https://vuejs.org/"
+        },
+        {
+          "title": "React",
+          "icon": "react",
+          "url": "https://react.docschina.org/"
+        }
+    ]
+}

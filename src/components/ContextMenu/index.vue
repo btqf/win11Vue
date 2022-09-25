@@ -22,7 +22,7 @@
        class="text-options-list"
        >
         <li v-if="item.type === 'icon'" class="text-option-item">
-            <img :src="getSrcContextMenu(`${item.url}.png`)" alt="" />
+            <img :src="getSrcIconUI(`${item.url}.png`)" alt="" />
             <span>{{ item.desc }}</span>
         </li>
         <li v-if="item.type === 'hr'" class="text-option-hr">
@@ -38,7 +38,7 @@
   import { pagePos, getViewportSize } from '@/utils/ViewSize/desktop.js'
   import DragFeatrue from '@/utils/ViewSize/drag/DragFeatrue.js'
   import { MenuData } from '@/data/MenuData.json'
-  import { getSrcContextMenu } from '@/utils/getSrc'
+  import { getSrcIconUI } from '@/utils/getSrc'
 
   const store = useMenuStore();
   const menuRef = ref(null);

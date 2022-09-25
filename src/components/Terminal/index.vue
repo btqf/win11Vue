@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-  import ToolBar from '@/components/ToolBar'
+  import ToolBar from '../ToolBar'
   import { reactive } from 'vue'
   import CommandItem from './components/CommandItem.vue'
   import { responseAction, setPath, handleTabCommand } from '@/utils/terminal';
@@ -98,7 +98,6 @@
   // 目的是更改大小
   const input = (e) => {
     const textarea = e.target;
-    console.log(textarea.scrollHeight)
     textarea.style.height = `${textarea.scrollHeight}px`;
   };
 </script>

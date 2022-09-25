@@ -4,7 +4,7 @@
     <span class="historyBtn" @click="goToChildren">🔜</span>
     <span class="historyBtn" @click="goToDesc">🔝</span>
     <div class="path">
-      <img src="@/assets/img/setting/user-sm.png" alt="" />
+      <img src="@/assets/img/setting/thispc-sm.png" alt="" />
       <input type="text" id="input" v-model.lazy.trim="inputPath" />
       <div class="path-content">
         <span v-for="item in path" :key="item">

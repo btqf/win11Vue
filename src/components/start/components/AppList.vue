@@ -35,13 +35,13 @@
 import { pinnedData, recommendData } from '@/data/StartData.json';
 import { getSrcStartIcon } from '@/utils/getSrc.js'
 
-const emit = defineEmits('[changeTag]');
+const emit = defineEmits(['changeTag']);
 function toAllApps() {
-    console.log("  emit('changeTag')");
+    // console.log("  emit('changeTag')");
     emit('changeTag');  
 }
 const openApp = (appName) => {
-    console.log(`open: ${appName}`);
+    // console.log(`open: ${appName}`);
 }
 </script>
 

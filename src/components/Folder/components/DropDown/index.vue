@@ -1,7 +1,7 @@
 <template>
   <div class="LeftNavRoot">
     <div class="MyComputor">
-      <img src="@/assets/img/setting/user-sm.png" alt="" />
+      <img src="@/assets/img/setting/thispc-sm.png" alt="" />
       <span>此电脑</span>
     </div>
     <DropDownMenuVue v-for="item in data" :key="item" :data="item"></DropDownMenuVue>
