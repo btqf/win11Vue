@@ -1,5 +1,5 @@
 <template>
-    <div class="FolderFullBox FullBox">
+    <lazy-component class="FolderFullBox FullBox">
         <ToolBar>File Explorer</ToolBar>
         <FolderTopTool></FolderTopTool>
         <PathTool></PathTool>
@@ -11,7 +11,7 @@
               <MainBody></MainBody>
             </div>
         </main>
-    </div>
+    </lazy-component>
 </template>
 
 <script setup>

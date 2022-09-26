@@ -1,5 +1,5 @@
 <template>
-  <div class="main-menu-wrapper" v-if="menuVisible" @click.stop ref="menuRef">
+  <lazy-component class="main-menu-wrapper" v-if="menuVisible" @click.stop ref="menuRef">
     <ul class="icon-options-list">
       <li class="icon-option-item">
         <img src="@/assets/img/setting/copy.png" alt="" draggable="false" />
@@ -30,7 +30,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </lazy-component>
 </template>
 
 <script setup>

@@ -28,6 +28,7 @@
             :key="item"
             :id="item.name"
             class="taskbarBtn"
+             @click="showTaskerbarPanel(item.name)"
             >
           <img :src="getSrcIcon(item.icon)" :id="`${item.name}Img`" />
         </div>
@@ -69,6 +70,7 @@
 
 <script setup>
 import {taskBarData, taskBarBottomPop} from '@/data'
+import { showBox, hideBox } from '@/utils';
 import { reactive } from 'vue'
 import { getSrcIcon } from '@/utils/getSrc.js'
 import LeftPane from '../leftPane'
@@ -89,6 +91,19 @@ const fn = () => {
 };
 fn();
 setInterval(fn, 1000);
+
+// 点击任务栏，传递name,打开相应界面
+const showTaskerbarPanel = (e) => {
+  const target = document.querySelector(`.${e}`);
+  if (target.style.zIndex === '' || target.style.zIndex < 0) {
+    showBox(target);
+  } else {
+    if (e === 'startMenu' || e === 'search' || e === 'widget') {
+      return hideBox(false, target, e);
+    }
+    return hideBox(true, target, e);
+  }
+};
 
 </script>
 

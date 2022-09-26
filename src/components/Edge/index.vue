@@ -1,5 +1,5 @@
 <template>
-    <div class="EdgeFullBox FullBox">
+    <lazy-component class="EdgeFullBox FullBox">
         <ToolBar>chorme</ToolBar>
         <!-- <EdgeToolBar></EdgeToolBar> -->
         <main>
@@ -66,7 +66,7 @@
             </div>
         </main>
        
-    </div>
+    </lazy-component>
 </template>
 
 <script setup>

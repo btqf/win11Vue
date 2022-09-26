@@ -11,6 +11,7 @@ specifiers:
   unplugin-auto-import: ^0.11.2
   vite: ^3.1.0
   vue: ^3.2.37
+  vue-lazyload: 3.0.0-rc.2
   vue-router: ^4.1.5
 
 dependencies:
@@ -20,6 +21,7 @@ dependencies:
   lodash: 4.17.21
   pinia: 2.0.22_vue@3.2.39
   vue: 3.2.39
+  vue-lazyload: 3.0.0-rc.2
   vue-router: 4.1.5_vue@3.2.39
 
 devDependencies:
@@ -1295,6 +1297,10 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.39
+    dev: false
+
+  /vue-lazyload/3.0.0-rc.2:
+    resolution: {integrity: sha512-Cg7Gqb7jAoiImMPH3EMfAwJ8gZuFoBJCEtA7+TGRljrtktDtV7JAHIyKvuTgQR8DFAd7MhKi1Ys8QHdSrnGdZQ==}
     dev: false
 
   /vue-router/4.1.5_vue@3.2.39:

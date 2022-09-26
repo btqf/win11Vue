@@ -12,9 +12,9 @@ const routes = [
         component: () => import('@/views/Home')
     },
     {
-        path: '/edge',
-        name: 'edge',
-        component: () => import('@/components/Edge')
+        path: '/pdf',
+        name: 'pdf',
+        component: () => import('@/components/PdfApp')
     }
 ]
 
