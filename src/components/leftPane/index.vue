@@ -11,7 +11,7 @@
     </div>
     <div class="left-pane-content">
       <PaneItem
-        v-for="(item, index) in leftPaneData"
+        v-for="(item, index) in LeftPaneData"
         :key="index"
         :img-info="item"
         class="erery-item"
@@ -22,7 +22,7 @@
 
 <script setup>
 import PaneItem from './component/PaneItem.vue';
-import { leftPaneData } from '@/data/leftPaneData.json';
+import { LeftPaneData } from '@/data/LeftPaneData.json';
 
 </script>
 

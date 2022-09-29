@@ -1,11 +1,11 @@
 <template>
     <div>
         <boot-screen v-if="!clock"></boot-screen>
-            <lock-screen
-             v-show="clock && !showcut"
-             @click="clickshow"
-            >
-            </lock-screen>
+        <lock-screen
+            v-show="clock && !showcut"
+            @click="clickshow"
+        >
+        </lock-screen>
         <Login v-show="showcut"></Login>
     </div>
 </template>

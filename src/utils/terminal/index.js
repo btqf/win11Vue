@@ -149,7 +149,7 @@ function handleCdArray(path, command, folder, itemArray) {
 
 // 同步文件夹路径
 export const setPath = (path) => {
-    console.log(searchTargetFolderByPath(path))
+    // console.log(searchTargetFolderByPath(path))
     store.setCurrentFolder(searchTargetFolderByPath(path));
 };
 

@@ -5,7 +5,7 @@
         <div class="avatar-wrap">
           <img src="@/assets/img/login/avatar.jpg" />
         </div>
-        <div class="username">btqf</div>
+        <div class="username">{{username}}</div>
       </div>
       <input type="password" class="password-ipt" @keyup="keyEvent"/>
        <img src="@/assets/img/login/rightrow.png" class='rightrow' @click="goToHome"/>
@@ -14,9 +14,11 @@
 </template>
 
 <script>
+import useUserStore from '@/store/userStore';
 
+const store = useUserStore()
+const username = store.getUsername
 export default {
-    
     methods: {
         toggleLogin(e) {
             e.target.classList.add('blur-wrap');
@@ -27,6 +29,11 @@ export default {
          goToHome() {
             this.$router.push('/home')
          }
+    },
+    setup() {
+      return {
+        username
+      }
     }
 }
 </script>
@@ -42,8 +49,6 @@ export default {
     background: url('@/assets/img/login/lock.jpg');
     background-attachment: fixed;
     background-size: 100% 100%;
-    // transform: scale(1.1);
-    // animation: reverse slideOut 0.1s;
 
     .login-wrap {
       position: absolute;

@@ -1,3 +1,10 @@
+const getSrcSettingTheme = (name) => {
+  if (typeof name === 'undefined') return 'error.png';
+  const path = `/src/assets/img/setting/assetsImg/default/${name}`;
+  const modules = import.meta.globEager(`/src/assets/img/setting/assetsImg/default/*`);
+  return modules[path]?.default;
+};
+
 const getSrcStartIcon = (name) => {
     if (typeof name === 'undefined') return 'error.png'
     const path = `/src/assets/img/icon/startIcon/${name}`;
@@ -43,6 +50,7 @@ const getSrcSetting = (name) => {
 
 
 export {
+    getSrcSettingTheme,
     getSrcStartIcon,
     getSrcIcon,
     getSrcIconUI,

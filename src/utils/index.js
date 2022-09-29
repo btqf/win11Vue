@@ -1,5 +1,6 @@
 import { taskBarData, toggleTaskPublicData } from '@/data'
-
+import MessageBox from '@/plugins/MessageBox'
+import useUserStore from '@/store/userStore'
 /**
  * @param {*} target 目标组件元素
  *
@@ -95,4 +96,24 @@ export const relizeZindex = (target) => {
 export const searchMaxZindex = () => {
     forAppArray();
     return toggleTaskPublicData.zIndex;
-  };
+};
+
+/**
+ * 处理更改用户名
+ * @returns void
+ */
+ export const handleRename = async () => {
+  const store = useUserStore();
+  const rename = await MessageBox.prompt({
+    showCancelBtn: true,
+    cancelBtnText: '取消',
+    confirmBtnText: '确定',
+    title: '重命名你的账户',
+    content: `当前用户名为 ${store.getUsername}`,
+  }).catch(() => {});
+
+  if (!rename) {
+    return;
+  }
+  store.setUsername(rename);
+};

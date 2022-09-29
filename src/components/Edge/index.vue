@@ -1,6 +1,6 @@
 <template>
     <lazy-component class="EdgeFullBox FullBox">
-        <ToolBar>chorme</ToolBar>
+        <ToolBar>Edge</ToolBar>
         <!-- <EdgeToolBar></EdgeToolBar> -->
         <main>
             <div class="edgeToolBar">

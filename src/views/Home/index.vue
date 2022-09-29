@@ -6,6 +6,7 @@
            <Folder></Folder>
            <DesktopIcon></DesktopIcon> 
            <Edge></Edge>
+           <Setting></Setting>
            <Terminal></Terminal>
        </div>
         <div class="footer">
@@ -20,34 +21,26 @@ import IconOverlayTip from './components/IconOverlayTip.vue'
 import DesktopIcon from '@/components/DesktopIcon'
 import Folder from '@/components/Folder'
 import Edge from '@/components/Edge'
+import Setting from '@/components/Setting'
 import Terminal from '@/components/Terminal'
 import TaskBar from '@/components/TaskBar/index.vue'
 import useMenuStore from '@/store/menuStore'
+import useUserStore from '@/store/userStore'
+import { getSrcSettingTheme } from '@/utils/getSrc';
 
 const menuRef = ref(null);
 const showMainMenu = (e) => {
     menuRef.value.setMenu(e, 'blank')
 }
 
-const store = useMenuStore();
+const menuStore = useMenuStore();
 const changeMenuVisible = () => {
-    store.setMenuVisible(false);
+    menuStore.setMenuVisible(false);
 }
-// export default {
-//     name:'Home',
-//     components: {
-//         ContextMenu,
-//         Folder,
-//         DesktopIcon,
-//         TaskBar,
-//         IconOverlayTip
-//     },
-//     methods: {
-//         showMainMenu: (e) => {
-//           menuRef.value.setMenu(e, 'blank');
-//         }
-//     }
-// }
+const userStore = useUserStore();
+onMounted(() => {
+    document.querySelector('.desktop').style.backgroundImage = `url(${getSrcSettingTheme(`${userStore.getTheme}.jpg`)})`;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -57,11 +50,11 @@ const changeMenuVisible = () => {
 .desktop {
     width: 100vw;
     height: 100vh;
-
+    background-size: 100% 100%;
     .main {
         height: calc(100% - 48px);
         width: 100%;
-        background-image: url("@/assets/img/setting/assetsImg/default/default.jpg");
+        // background-image: url("@/assets/img/setting/assetsImg/default/default.jpg");
         background-size: 100% 100%;
     }
     .footer {

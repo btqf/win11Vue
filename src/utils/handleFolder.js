@@ -1,4 +1,5 @@
 import useFolderStore from '@/store/folderStore'
+import MessageBox from '@/plugins/MessageBox';
 const store = useFolderStore()
 
 
@@ -56,10 +57,18 @@ export const searchTargetFolderByPath = (path) => {
         if (data) {
             return data;
         } else {
-            alert('数据不存在')
+          MessageBox({
+            confirmBtnText: '确定',
+            title: '文件夹',
+            content: '数据不存在！',
+          });
         } 
     } else {
-        alert('磁盘不存在')
+      MessageBox({
+        confirmBtnText: '确定',
+        title: '文件夹',
+        content: '磁盘不存在！',
+      });
     }
 }
 

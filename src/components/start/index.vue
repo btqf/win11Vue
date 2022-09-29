@@ -10,7 +10,7 @@
     <div class="bottomMenu" @click="gotoLoginPage">
       <div class="user">
         <img src="@/assets/img/login/avatar.jpg" alt="" />
-        <p>btqf</p>
+        <p>{{store.getUsername}}</p>
       </div>
       <i class="shutdown"></i>
     </div>
@@ -21,8 +21,10 @@
 import AppList from './components/AppList.vue'
 import AllApps from './components/AllApps.vue'
 import { markRaw, shallowRef } from 'vue'
+import useUserStore from '@/store/userStore';
+const store = useUserStore();
 
-const componentTag = shallowRef(AppList) 
+const componentTag = shallowRef(AppList);
 const changeTag = () => {
     componentTag.value = componentTag.value === markRaw(AppList) ? markRaw(AllApps) : markRaw(AppList);
 };

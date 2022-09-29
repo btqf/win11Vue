@@ -72,6 +72,7 @@
 
   // 文件改名
   const changeName = (e, item) => {
+      // e.preventDefault();
     //   Desktop文件夹不能修改名字
       if (item.name === 'Desktop' || item.getPath()[1] === 'Desktop') {
           return;

@@ -26,7 +26,6 @@ export default {
         }
     },
     created() {
-        console.log(dayjs().day() - 1)
         setInterval(() => {
             this.updateTime()
         }, 1000)
@@ -50,30 +49,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bg {
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-color: black;
-  background-image: url(@/assets/img/login/lock.jpg);
-}
-.date-info {
-  position: fixed;
-  left: 50%;
-  top: 400px;
-  color: rgb(255, 255, 255);
-  margin-left: -113px;
-  & > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .date-info__left {
-    font-size: 64px;
-    margin-right: 5px;
-  }
-  .date-info__right {
-    font-size: 20px;
-    line-height: 1.5em;
-  }
-}
+    .bg {
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-color: black;
+        background-image: url(@/assets/img/login/lock.jpg);
+    }
+    .date-info {
+        position: fixed;
+        left: 50%;
+        top: 350px;
+        color: rgb(255, 255, 255);
+        margin-left: -113px;
+        & > * {
+            display: inline-block;
+            vertical-align: middle;
+         }
+        .date-info__left {
+            font-size: 64px;
+            margin-right: 5px;
+        }
+        .date-info__right {
+            font-size: 20px;
+            line-height: 1.5em;
+        }
+    }
 </style>

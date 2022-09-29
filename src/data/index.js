@@ -50,7 +50,7 @@ export const taskBarData = reactive([
   },
   {
     icon: 'store.png',
-    name: 'store',
+    name: 'storeFullBox',
   },
 ]);
 
@@ -82,7 +82,7 @@ export const deskTopData = [
   {
     icon: 'store.png',
     name: 'store',
-    componentName: 'store',
+    componentName: 'storeFullBox',
     posIdx: 6,
   },
 ];
