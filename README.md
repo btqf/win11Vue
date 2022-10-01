@@ -17,44 +17,39 @@
 
 7. 最重要的是 **NONE-UI组件库**
 
-   
 
 #### 2.项目界面
 
-![image-20221001232627919](C:\Users\清风\AppData\Roaming\Typora\typora-user-images\image-20221001232627919.png)
+![](D:\vue project\win11\win11Vue\public\img\start.png)
 
-![image-20221001232727904](C:\Users\清风\AppData\Roaming\Typora\typora-user-images\image-20221001232727904.png)
+![](D:\vue project\win11\win11Vue\public\img\setting.png)
 
-![image-20221001232901378](C:\Users\清风\AppData\Roaming\Typora\typora-user-images\image-20221001232901378.png)
-
-![image-20221001232935063](C:\Users\清风\AppData\Roaming\Typora\typora-user-images\image-20221001232935063.png)
+![](D:\vue project\win11\win11Vue\public\img\folder.png)
 
 #### 3.项目功能
 
 - **任务栏**
+  - 弹出实时新闻页 
 
-- - 弹出实时新闻页 
+  - 弹出菜单选择板
 
-- -  弹出菜单选择板
+  - 在菜单选择板内可以切换到应用列表，弹出字母表，可以打开终端，可以退出登录
 
-- - 在菜单选择板内可以切换到应用列表，弹出字母表，可以打开终端，可以退出登录
+  - search、setting、browser 打开的位置、样式
 
-- - search、setting、browser 打开的位置、样式
+  - setting板块选项详情的切换、动态背景
 
-- - setting板块选项详情的切换、动态背景
+  - quickSetting板块里面图标的点击、拖动效果
 
-- - quickSetting板块里面图标的点击、拖动效果
+  - calender 当天时钟、日期的标注、 查看不同月的日历
 
-- - calender 当天时钟、日期的标注、 查看不同月的日历
+  - 点击图标后应用的显隐和左面多个应用重叠时的层级
 
-- - 点击图标后应用的显隐和左面多个应用重叠时的层级
+  - 鼠标到相应位置或点击后的样式变化
 
-- - 鼠标到相应位置或点击后的样式变化
-
-- - 消息提示框 MessageBox
+  - 消息提示框 MessageBox
 
 - **桌面图标**
-
   - 桌面图标 与 文件夹 变更同步更新
   - 图标拖动
   - 打开现存 App
@@ -78,8 +73,7 @@
   - 文件主题双击切换层级、右击改名
   - deskTop 桌面文件夹更新同步桌面 UI
 
-- 终端界面
-
+- **终端界面**
   - CD： 切换目标文件夹
 
   - DIR：当前文件夹下可视文件
@@ -90,10 +84,10 @@
   - C: 磁盘切换
   - 方向上键记录切换，方向下键 CD 文件名称补全
 
-- - 设置
-    - 左侧 nav 栏
-    - 右侧详情联动左侧
-    - 修改用户名 rename
-    - 页面换肤
-  - 应用商店、浏览器
-  - 菜单上下文
+- **设置**
+  - 左侧 nav 栏
+  - 右侧详情联动左侧
+  - 修改用户名 rename
+  - 页面换肤
+- **应用商店、浏览器**
+- **菜单上下文**

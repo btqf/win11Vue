@@ -1,7 +1,6 @@
 <template>
     <lazy-component class="EdgeFullBox FullBox">
         <ToolBar>Edge</ToolBar>
-        <!-- <EdgeToolBar></EdgeToolBar> -->
         <main>
             <div class="edgeToolBar">
                 <!-- 工具栏 -->
