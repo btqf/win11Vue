@@ -21,7 +21,7 @@
 
 #### 2.项目界面
 
-![](D:\vue project\win11\win11Vue\public\img\start.png)
+![](./public/img/start.png)
 
 ![](D:\vue project\win11\win11Vue\public\img\setting.png)
 
